@@ -1,27 +1,34 @@
-<h2>Employees</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Position</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let employee of employees">
-            <td>{{employee.id}}</td>
-            <td>{{employee.firstName}}</td>
-            <td>{{employee.lastName}}</td>
-            <td>{{employee.email}}</td>
-            <td>{{employee.phone}}</td>
-            <td>{{employee.position}}</td>
-            <td>
-                <button (click)="deleteEmployee(employee.id)">Delete</button>
-                <button (click)="editEmployee(employee.id)">Edit</button>
-            </td>
-    </tbody>
-</table>
+<div class="card mt-5">
+    <div class="card-header">
+        <h2 class="my-2 text-decoration-underline">Employees - Overview</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Position</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                <td>{{employee.id}}</td>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.phone}}</td>
+                <td>{{employee.position}}</td>
+                <td class="text-nowrap">
+                    <button type="button" class="btn btn-info btn-sm" (click)="editEmployee(employee.id)">Edit</button>
+                    <button type="button" class="btn btn-danger mx-2 btn-sm" (click)="deleteEmployee(employee.id)">Delete</button>
+                </td>
+                </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
