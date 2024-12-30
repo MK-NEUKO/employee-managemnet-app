@@ -9,11 +9,15 @@ import { Employee } from '../models/employee';
 })
 export class EmployeeService {
 
-  private apiUrl = `${environment.apiUrl}/employee/all`;
+  private apiUrl = `${environment.apiUrl}/employee`;
 
   constructor(private http: HttpClient) { }
 
   getEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.apiUrl);
+    return this.http.get<Employee[]>(`${this.apiUrl}/all`);
+  }
+
+  createEmployee(employee: Employee): Observable<Employee> {
+    return this.http.post<Employee>(`${this.apiUrl}/create`, employee);
   }
 }
