@@ -10,5 +10,5 @@ import { EmployeeTableComponent } from './employee-table/employee-table.componen
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'employee-managemnet-app';
+  title = 'employee-management-app';
 }
