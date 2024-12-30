@@ -19,6 +19,9 @@
             <td>{{employee.email}}</td>
             <td>{{employee.phone}}</td>
             <td>{{employee.position}}</td>
-            <td><button (click)="deleteEmployee(employee.id)">Delete</button></td>
+            <td>
+                <button (click)="deleteEmployee(employee.id)">Delete</button>
+                <button (click)="editEmployee(employee.id)">Edit</button>
+            </td>
     </tbody>
 </table>
