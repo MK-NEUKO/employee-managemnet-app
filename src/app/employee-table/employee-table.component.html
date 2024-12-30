@@ -8,6 +8,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Position</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -18,5 +19,6 @@
             <td>{{employee.email}}</td>
             <td>{{employee.phone}}</td>
             <td>{{employee.position}}</td>
+            <td><button (click)="deleteEmployee(employee.id)">Delete</button></td>
     </tbody>
 </table>
